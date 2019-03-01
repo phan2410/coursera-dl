@@ -75,6 +75,8 @@ from .network import get_page, get_page_and_url
 from .commandline import parse_args
 from .extractors import CourseraExtractor
 
+from six.moves import http_cookiejar as cookielib
+
 from coursera import __version__
 
 
@@ -92,6 +94,9 @@ def get_session():
     """
 
     session = requests.Session()
+    cj = cookielib.MozillaCookieJar()
+    cj.load('cookies.txt', ignore_expires=True)
+    session.cookies = cj
     session.mount('https://', TLSAdapter())
 
     return session
@@ -105,7 +110,7 @@ def list_courses(args):
     @type args: namedtuple
     """
     session = get_session()
-    login(session, args.username, args.password)
+    # login(session, args.username, args.password)
     extractor = CourseraExtractor(session)
     courses = extractor.list_courses()
     logging.info('Found %d courses', len(courses))
@@ -233,7 +238,7 @@ def main():
         return
 
     session = get_session()
-    login(session, args.username, args.password)
+    # login(session, args.username, args.password)
     if args.specialization:
         args.class_names = expand_specializations(session, args.class_names)
 

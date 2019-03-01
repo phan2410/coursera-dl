@@ -1,5 +1,18 @@
 # Coursera Downloader
 
+### TEMPORARY FIX Branch
+
+This is temporarty fix for **Bad Request URL** as mentioned here is [Issue# 702](https://github.com/coursera-dl/coursera-dl/issues/702)
+
+To use this download the cookies file as cookies.txt in the directory, where you want to download courses and then run the coursera-dl command as usual.
+
+The cookies can be downloaded using [chrome extension](https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg?hl=en)
+
+**Caveats:**
+
+Keep your command simple, adding some options, such as `--download-quizzes --download-notebooks` breaks things.
+
+
 [![Build Status](https://travis-ci.org/coursera-dl/coursera-dl.svg?branch=master)](https://travis-ci.org/coursera-dl/coursera-dl)
 [![Build status](https://ci.appveyor.com/api/projects/status/3hru0ycv5fbny5k8/branch/master?svg=true)](https://ci.appveyor.com/project/balta2ar/coursera-dl/branch/master)
 [![Coverage Status](https://coveralls.io/repos/coursera-dl/coursera-dl/badge.svg)](https://coveralls.io/r/coursera-dl/coursera-dl)
