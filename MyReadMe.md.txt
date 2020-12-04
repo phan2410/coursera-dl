@@ -9,5 +9,13 @@ git checkout fix_bad_request_api_v3
 
 cp <the path of cookies.txt>\cookies.txt  cookies.txt
 
-.\coursera-dl.bat -c cookies.txt --video-resolution 720p <your course name>
+Windows: .\coursera-dl.bat -c cookies.txt --video-resolution 720p --path <path> --subtitle-language en --download-quizzes --download-notebooks <your course name>
+Linux: ./coursera-dl -c cookies.txt --video-resolution 720p --path /home/myuser/ --subtitle-language en --download-quizzes --download-notebooks <your course name>
 # here <your course name> = neural-networks-deep-learning
+# Add --specialization if it is the name of a specialization
+
+## For more help, run $./coursera-dl --help
+
+For one using docker,
+$ docker-compose run coursera-dl
+$ ./coursera-dl -c cookies.txt --video-resolution 720p --path /home/myuser/ --subtitle-language en --download-quizzes --download-notebooks <your course name>

@@ -1,0 +1,13 @@
+# use docker-compose run coursera-dl
+version: '3'
+services: 
+    coursera-dl:
+        build:
+            context: .
+            dockerfile: MyDockerfile
+        user: myuser
+        working_dir: /home/myuser/coursera-dl
+        tty: true
+        volumes: 
+            - .:/home/myuser/coursera-dl
+            - /home/fan/CourseDump/Coursera:/home/myuser/dump
