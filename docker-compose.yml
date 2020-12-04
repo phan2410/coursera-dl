@@ -10,4 +10,5 @@ services:
         tty: true
         volumes: 
             - ./transfer:/home/myuser/coursera-dl/transfer
+            - ./cookies.txt:/home/myuser/coursera-dl/cookies.txt
             - /home/fan/CourseDump/Coursera:/home/myuser/dump
