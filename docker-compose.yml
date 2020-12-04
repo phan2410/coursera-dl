@@ -9,5 +9,5 @@ services:
         working_dir: /home/myuser/coursera-dl
         tty: true
         volumes: 
-            - .:/home/myuser/coursera-dl
+            - ./transfer:/home/myuser/coursera-dl/transfer
             - /home/fan/CourseDump/Coursera:/home/myuser/dump

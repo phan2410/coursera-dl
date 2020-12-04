@@ -22,6 +22,3 @@ venv3
 .ipynb_checkpoints
 .ropeproject
 .mypy_cache
-
-# cookies.txt
-cookies.txt
